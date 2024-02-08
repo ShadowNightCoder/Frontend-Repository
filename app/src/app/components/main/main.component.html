@@ -1,0 +1,30 @@
+<div class="main">
+    <input type="text" placeholder="enter name" [(ngModel)]="newName"><br><br>
+    enter family name: <input type="text" (input)="eventsBindingFamilyName($event)">
+    <button [disabled]="buttonStatus" (click)="eventsBindingConsole()">send information</button>
+    <br>
+    {{newName}}
+    <br>
+    {{familyName}}
+    <br><br><br><br>
+
+
+    <div class="container">
+        <input type="text" [(ngModel)]="username">
+        <p *ngIf="username; else userNameInput">your Username is: {{username}}</p>
+        <ng-template #userNameInput>
+            <p style="color: red; font-size: 1.3em; font-weight: 700;">Enter Username</p>
+        </ng-template>
+
+        <div class="username" [ngStyle]="{backgroundColor: colorNow()}" [ngClass]="{text_style: usernameStatus === 'being used already'}">
+            the username you entred is {{usernameStatus}}
+        </div>
+        <button (click)="restartUsername()" [disabled]="!username">click for Restart username</button>
+    
+        <br><br><br>
+        <h2>UserNames List:</h2>
+        <ul *ngFor="let user of userNamesList">
+            <li>{{user}}</li>
+        </ul>
+    </div>
+</div>
