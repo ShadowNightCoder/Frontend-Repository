@@ -1,8 +1,0 @@
-<div class="container">
-    <p *ngIf="pStatus">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi velit suscipit accusantium. Doloribus, sed aliquid illum facilis velit quaerat expedita ratione laborum nobis autem optio officia unde vel, blanditiis deserunt natus ipsum ab ipsa molestias et recusandae, explicabo at! Ea, quam natus. Id ea nisi molestiae cum dicta, nihil vitae praesentium eius sunt, eos amet illo maiores tempora voluptatum autem in quos temporibus aperiam quaerat voluptates? Nesciunt odit maxime maiores voluptatem dolores repellendus voluptate vero inventore quod tempore possimus deserunt nam iste voluptates ex, voluptas cum porro? Quas a natus expedita aspernatur cupiditate voluptates explicabo sunt asperiores recusandae. Labore nobis, aperiam necessitatibus a voluptates ad rem quas iste beatae. Porro excepturi temporibus incidunt laboriosam voluptas veritatis culpa dolorem repellat possimus.</p>
-    <button [innerHTML]="bottonText" (click)="paragrphStatus()"></button>
-    
-    <ul *ngFor="let nowdate of timeStampArray; let myindex = index">
-        {{myindex + 1}}. <div [ngStyle]="{color: timeStampArray.length >= 5 ? 'white': 'lime'}" [ngClass]="[colorFunc()]" style="display: inline;">{{nowdate}}</div>
-    </ul>
-</div>
